@@ -6,3 +6,4 @@ D:\GitHub\Repos\Todo\Todo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 D:\GitHub\Repos\Todo\Todo\obj\Debug\Todo.csproj.CoreCompileInputs.cache
 D:\GitHub\Repos\Todo\Todo\obj\Debug\Todo.dll
 D:\GitHub\Repos\Todo\Todo\obj\Debug\Todo.pdb
+D:\GitHub\Repos\Todo\Todo\obj\Debug\Todo.csprojResolveAssemblyReference.cache
