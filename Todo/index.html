@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html ng-app="myTodos">
+
+<head>
+    <title>A Simple Todo List</title>
+
+    <script src="Scripts/angular-1.6.7/angular.min.js"></script>
+    <script src="App/todo.js"></script>
+    <link href="Contents/css/todo.css" rel="stylesheet" />
+    <link href="Contents/bootstrap-combined/bootstrap-combined.css" rel="stylesheet" />
+</head>
+
+<body class="mainTodo">
+    <div ng-controller="TodoCtrl as get">
+        <div class="pull-left">
+            <div>
+                <h2>Todo</h2>
+                <span>{{get.remaining()}} of {{get.getTotalTodos()}} remaining</span> [ <a href="" ng-click="get.unMarked()">archive</a> ]
+                <ul class="unstyled">
+                    <li ng-repeat="todo in get.todos">
+                        <input type="checkbox" ng-model="todo.done" />
+                        <span class="done-{{todo.done}}">{{todo.text}}</span>
+                        <a ng-if="todo.done" type="text" href="#" ng-click="get.remove(get.todos, todo)"><i class="icon-trash"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="get.remaining() !== get.getTotalTodos()">
+                <button type="button" class="btn btn-danger btn-small" ng-click="get.unMarked()"><i class="icon-trash"></i> Trash</button>
+            </div>
+            <div>&nbsp;</div>
+            <div>
+                <form class="form-horizontal">
+                    <input type="text" ng-model="get.formTodoText" ng-model-instant>
+                    <button class="btn btn-success" ng-click="get.addTodo()"><i class="icon-plus"></i>Add</button>
+                    <button class="btn btn-info" ng-click="get.toggleJsonString()">Toggle Json String</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <pre ng-if="get.showJson">{{get.todos | json}}</pre>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--
+
+<h2>Prepended & Appended Form Inputs</h2>
+
+<form>
+  <div class="input-prepend">
+    <span class="add-on"><i class="icon-envelope"></i></span>
+    <input class="span2" type="text" placeholder="Email address">
+  </div>
+  <div class="input-prepend">
+    <span class="add-on"><i class="icon-key"></i></span>
+    <input class="span2" type="password" placeholder="Password">
+  </div>
+</form>
+
+<h2>Stacked Icons</h2>
+
+<span class="icon-stack">
+  <i class="icon-check-empty icon-stack-base"></i>
+  <i class="icon-twitter"></i>
+</span>
+icon-twitter on icon-check-empty<br>
+<span class="icon-stack">
+  <i class="icon-circle icon-stack-base"></i>
+  <i class="icon-flag icon-light"></i>
+</span>
+icon-flag on icon-circle<br>
+<span class="icon-stack">
+  <i class="icon-sign-blank icon-stack-base"></i>
+  <i class="icon-terminal icon-light"></i>
+</span>
+icon-terminal on icon-sign-blank<br>
+<span class="icon-stack">
+  <i class="icon-camera"></i>
+  <i class="icon-ban-circle icon-stack-base text-error"></i>
+</span>
+icon-camera on icon-ban-circle
+
+-->
