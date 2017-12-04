@@ -26,9 +26,6 @@
                     </li>
                 </ul>
             </div>
-            <div ng-if="get.remaining() !== get.getTotalTodos()">
-                <button type="button" class="btn btn-danger btn-small" ng-click="get.unMarked()"><i class="icon-trash"></i> Trash</button>
-            </div>
             <div>&nbsp;</div>
             <div>
                 <!-- bootstrap.js and jquery.js are needed for this validation to work as intended -->
@@ -43,13 +40,14 @@
                     <div>&nbsp;</div>
                     <div>
                         <button class="btn btn-success" type="submit"><i class="icon-plus"></i>Add</button>
-                        <button class="btn btn-info" ng-click="get.toggleJsonString()">Toggle Json String</button>
+                        <button type="button" class="btn btn-info" ng-click="get.toggleJsonString()">Toggle Json String</button>
+                        <button type="button" class="btn btn-danger btn-small" ng-click="get.unMarked()"><i class="icon-trash"></i> Trash Marked Items</button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="row">&nbsp;</div>
-        <div class="row">
+        <div>
             <pre ng-if="get.showJson">{{get.todos | json}}</pre>
         </div>
     </div>
