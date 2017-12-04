@@ -1,0 +1,8 @@
+D:\GitHub\Repos\Todo\bin\Todo.dll.config
+D:\GitHub\Repos\Todo\bin\Todo.dll
+D:\GitHub\Repos\Todo\bin\Todo.pdb
+D:\GitHub\Repos\Todo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\GitHub\Repos\Todo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\GitHub\Repos\Todo\obj\Debug\Todo.csproj.CoreCompileInputs.cache
+D:\GitHub\Repos\Todo\obj\Debug\Todo.dll
+D:\GitHub\Repos\Todo\obj\Debug\Todo.pdb
