@@ -15,12 +15,12 @@
 
         var vm = this;
 
-        //View bindables
-        vm.remove = remove;
-        vm.addTodo = addTodo;
-        vm.unMarked = unMarked;
-        vm.remaining = remaining;
-        vm.getTotalTodos = getTotalTodos;
+        //View bind-ables
+        vm.remove           = remove;
+        vm.addTodo          = addTodo;
+        vm.unMarked         = unMarked;
+        vm.remaining        = remaining;
+        vm.getTotalTodos    = getTotalTodos;
         vm.toggleJsonString = toggleJsonString;
 
         vm.showJson = false;
@@ -41,7 +41,7 @@
             "text": "Architecture Overview, Metrics & Baselines",
             "done": true
         }, {
-            "text": "Explotre Service Endpoints",
+            "text": "Explore Service Endpoints",
             "done": true
         }, {
             "text": "Diagnostics Sessions",
@@ -117,16 +117,17 @@
         }
 
         function addTodo() {
-            if (vm.formTodoText) {
+            if (!vm.formTodoText) {
+                return null;
+            } else {
                 var newTodo = {
                     text: vm.formTodoText,
                     done: false
                 };
                 vm.todos.push(newTodo);
                 vm.formTodoText = '';
-            } else {
-                return null;
             }
+            return null;
         }
 
         function unMarked() {
@@ -149,15 +150,17 @@
         function remove(arr, val) {
             //Ref: https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript/18885102#18885102
             //first, check if marked for deletion
-            if (val.done) {
-                var j = 0;
-                for (var i = 0, l = arr.length; i < l; i++) {
-                    if (arr[i] !== val) {
-                        arr[j++] = arr[i];
-                    }
+            if (!val.done)
+                return;
+            var j = 0;
+            for (var i = 0, l = arr.length; i < l; i++) {
+                if (arr[i] !== val) {
+                    arr[j++] = arr[i];
                 }
-                arr.length = j;
             }
+            arr.length = j;
         }
+
+        return vm;
     }
 }());
