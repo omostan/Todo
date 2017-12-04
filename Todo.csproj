@@ -45,6 +45,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="bundleconfig.json" />
+    <Content Include="App\todo.min.js">
+      <DependentUpon>todo.js</DependentUpon>
+    </Content>
+    <Content Include="Contents\css\todo.min.css">
+      <DependentUpon>todo.css</DependentUpon>
+    </Content>
     <Content Include="Dependencies\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" />
     <Content Include="Dependencies\Microsoft.Net.Compilers.2.4.0\Microsoft.Net.Compilers.2.4.0.nupkg" />
     <Content Include="Dependencies\Microsoft.Net.Compilers.2.4.0\ThirdPartyNotices.rtf" />

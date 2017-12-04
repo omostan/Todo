@@ -4,5 +4,17 @@
     "inputFiles": [
       "Scripts/bootstrap-combined/bootstrap-combined.css"
     ]
+  },
+  {
+    "outputFileName": "Contents/css/todo.min.css",
+    "inputFiles": [
+      "Contents/css/todo.css"
+    ]
+  },
+  {
+    "outputFileName": "App/todo.min.js",
+    "inputFiles": [
+      "App/todo.js"
+    ]
   }
 ]
