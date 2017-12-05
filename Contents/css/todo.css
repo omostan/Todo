@@ -1,8 +1,11 @@
-﻿.mainTodo {
+﻿.mainBody {
     margin: 2%;
 }
 
 .done-true {
     text-decoration: line-through;
-    color: grey;
+    color: #bcbcbc;
+}
+.done-false { /* added to demonstrate how to change the color of unfinished items on the list */
+    color: rgb(9, 87, 101);
 }
